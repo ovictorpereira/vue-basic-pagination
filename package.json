@@ -1,0 +1,48 @@
+{
+  "name": "vue-basic-pagination",
+  "version": "1.0.1",
+  "description": "A Basic Vue.js 3 pagination component",
+  "main": "./dist/vue-basic-pagination.umd.js",
+  "module": "./dist/vue-basic-pagination.js",
+  "types": "./dist/vue-basic-pagination.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-basic-pagination.esm.js",
+      "require": "./dist/vue-basic-pagination.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "pagination",
+    "paginate",
+    "library",
+    "vuebasicpagination"
+  ],
+  "author": "Victor Pereira",
+  "license": "MIT",
+  "homepage": "https://github.com/ovictorpereira/vue3-basic-pagination",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.4",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.7",
+    "vite-plugin-dts": "^0.17.0",
+    "vue": "^3.0.0"
+  }
+}
