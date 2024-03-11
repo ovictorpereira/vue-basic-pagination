@@ -1,19 +1,15 @@
 {
   "name": "vue-basic-pagination",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Basic Vue.js 3 pagination component",
   "main": "./dist/vue-basic-pagination.umd.js",
-  "module": "./dist/vue-basic-pagination.js",
-  "types": "./dist/vue-basic-pagination.d.ts",
+  "module": "./dist/vue-basic-pagination.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-basic-pagination.esm.js",
-      "require": "./dist/vue-basic-pagination.js"
+      "import": "./dist/vue-basic-pagination.es.js",
+      "require": "./dist/vue-basic-pagination.umd.js"
     },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
-    }
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist",

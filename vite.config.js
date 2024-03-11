@@ -8,9 +8,9 @@ export default defineConfig({
   plugins: [vue(), dts()],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.js"),
-      name: "VueBasicPagination",
-      fileName: "vue-basic-pagination",
+      entry: resolve(__dirname, "src/index.js"),
+      name: "vue-basic-pagination",
+      fileName: (format) => `vue-basic-pagination.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
