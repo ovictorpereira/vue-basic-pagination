@@ -11,7 +11,8 @@ Register the component
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import VueBasicPagination from 'vue-basic-pagination'
+import VueBasicPagination from 'vue-basic-pagination';
+import 'vue-basic-pagination/dist/style.css'
 
 createApp(App)
 .use(VueBasicPagination)

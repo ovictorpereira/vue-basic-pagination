@@ -1,6 +1,6 @@
 {
   "name": "vue-basic-pagination",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Basic Vue.js 3 pagination component",
   "main": "./dist/vue-basic-pagination.umd.js",
   "module": "./dist/vue-basic-pagination.es.js",
