@@ -6,33 +6,40 @@ NPM
 ```bash
 $ npm install vue-basic-pagination
 ``` 
-Register the component
+Register the component globally...
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import VueBasicPagination from 'vue-basic-pagination';
+import { VueBasicPagination } from 'vue-basic-pagination';
 import 'vue-basic-pagination/dist/style.css'
+// don't forget to load the css file
 
 createApp(App)
-.use(VueBasicPagination)
+.component('VueBasicPagination', VueBasicPagination)
 .mount('#app')
+``` 
 
+... or import it locally
+```js
+<script setup>
+import { VueBasicPagination } from 'vue-basic-pagination';
+import 'vue-basic-pagination/dist/style.css'
+</script>
 ``` 
 
 ## Usage
 ```html
-<VueBasicPagination :total-rows="100" :per-page="10" v-model="currentPage" />
+<VueBasicPagination :total-rows="totalRows" :per-page="perPage" v-model="currentPage" />
 ```
 ```js
-// COMPOSITION API
+<script setup>
 import { ref } from 'vue'
-setup () {
-    const currentPage = ref(1)
-    return {
-        currentPage
-    }
-}
+
+const totalRows = ref(100)
+const perPage = ref(10)
+const currentPage = ref(1)
+</script>
 ```
 
 ## Available props

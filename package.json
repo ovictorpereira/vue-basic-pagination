@@ -1,44 +1,57 @@
 {
   "name": "vue-basic-pagination",
-  "version": "1.0.4",
-  "description": "A Basic Vue.js 3 pagination component",
-  "main": "./dist/vue-basic-pagination.umd.js",
-  "module": "./dist/vue-basic-pagination.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue-basic-pagination.es.js",
-      "require": "./dist/vue-basic-pagination.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
+  "author": "Victor Pereira",
+  "license": "MIT",
+  "private": false,
+  "version": "1.1.5",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovictorpereira/vue-basic-pagination.git"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "serve": "vite preview"
-  },
+  "homepage": "https://github.com/ovictorpereira/vue-basic-pagination",
   "keywords": [
     "vue",
     "vue3",
     "pagination",
     "paginate",
     "library",
-    "vuebasicpagination"
+    "vue-basic-pagination"
   ],
-  "author": "Victor Pereira",
-  "license": "MIT",
-  "homepage": "https://github.com/ovictorpereira/vue-basic-pagination",
+  "files": [
+    "dist",
+    "src/components/"
+  ],
+  "main": "./dist/vue-basic-pagination.umd.cjs",
+  "module": "./dist/vue-basic-pagination.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-basic-pagination.js",
+      "require": "./dist/vue-basic-pagination.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.4",
-    "typescript": "^4.3.5",
-    "vite": "^2.3.7",
-    "vite-plugin-dts": "^0.17.0",
-    "vue": "^3.0.0"
+    "@vitejs/plugin-vue": "^4.1.0",
+    "path": "^0.12.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-tsc": "^1.4.2"
   }
 }
