@@ -3,18 +3,18 @@
         <li>
             <button class="pagination-btn pagination-first-btn" :class="small ? 'pagination-btn-small' : ''"
                 @click="first()">
-                <span>{{props.firstBtn}}</span>
+                <span>{{ props.firstBtn }}</span>
             </button>
         </li>
 
         <li>
             <button class="pagination-btn pagination-prev-btn" :class="small ? 'pagination-btn-small' : ''"
                 @click="prev()">
-                <span>{{props.prevBtn}}</span>
+                <span>{{ props.prevBtn }}</span>
             </button>
         </li>
 
-        <li v-if="paginationItems.length > 4 && parseInt(props.modelValue) >  3">
+        <li v-if="paginationItems.length > 4 && parseInt(props.modelValue) > 3">
             <button class="pagination-btn" :class="small ? 'pagination-btn-small' : ''">
                 ...
             </button>
@@ -30,7 +30,7 @@
             </li>
         </template>
 
-        <li v-if="paginationItems.length > 4 &&  parseInt(props.modelValue) < paginationItems.length - 1">
+        <li v-if="paginationItems.length > 4 && parseInt(props.modelValue) < paginationItems.length - 1">
             <button class="pagination-btn" :class="small ? 'pagination-btn-small' : ''">
                 ...
             </button>
@@ -39,14 +39,14 @@
         <li>
             <button class="pagination-btn pagination-next-btn" :class="small ? 'pagination-btn-small' : ''"
                 @click="next()">
-                <span>{{props.nextBtn}}</span>
+                <span>{{ props.nextBtn }}</span>
             </button>
         </li>
 
         <li>
             <button class="pagination-btn pagination-last-btn" :class="small ? 'pagination-btn-small' : ''"
                 @click="last()">
-                <span>{{props.lastBtn}}</span>
+                <span>{{ props.lastBtn }}</span>
             </button>
         </li>
     </ul>
@@ -92,7 +92,7 @@ const props = defineProps({
 })
 
 const paginationItems = computed(() => {
-    let pages = Math.floor(props.totalRows / props.perPage)
+    let pages = Math.ceil(props.totalRows / props.perPage)
     return Array.from({ length: pages }, (_, i) => i + 1)
 })
 
